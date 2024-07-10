@@ -85,7 +85,7 @@ h1 {
   }
 
   .countdown-item {
-    flex: 1 1 100%;
+    flex: 1 1 calc(50% - 20px);
     margin: 5px;
   }
 
