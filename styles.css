@@ -1,14 +1,27 @@
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
   margin: 0;
   background: linear-gradient(45deg, #7b4397, #dc2430);
   color: white;
   text-align: center;
-  padding: 0;
+}
+
+/* bug correction for 100vh in ios / chrome */
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
 }
 
 .container {
@@ -84,3 +97,4 @@ h1 {
     font-size: 0.8em;
   }
 }
+
